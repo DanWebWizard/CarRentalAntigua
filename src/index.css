@@ -1,0 +1,86 @@
+/* Global Styles */
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: #333333; /* Dark text color for better readability */
+    background-color: #f2f2f2; /* Light background for contrast */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Ensure body content stacks vertically */
+    background-color: #f2f2f2; /* Light background for contrast */
+}
+
+a {
+    font-weight: 500;
+    color: #646cff; /* Link color */
+    text-decoration: inherit;
+}
+
+/* Navbar link styles */
+nav ul li a {
+    color: white; /* Default link color */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+/* Hover state for links */
+nav ul li a:hover {
+    color: #FAF9F6; /* Lighter color for better contrast */
+}
+
+/* Optional: Active link style for better navigation feedback */
+nav ul li a.active {
+    color: #FFCC00; /* Highlight color for active links */
+}
+
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a; /* Dark button background */
+    color: #ffffff; /* White text on button */
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+    button:hover {
+        border-color: #646cff; /* Button border color on hover */
+    }
+
+    button:focus,
+    button:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+    }
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #333333; /* Dark text color for light mode */
+        background-color: #ffffff; /* Light background for light mode */
+    }
+
+    button {
+        background-color: #f9f9f9; /* Light button background in light mode */
+        color: #333333; /* Dark text on button in light mode */
+    }
+}

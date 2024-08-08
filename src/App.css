@@ -1,0 +1,258 @@
+﻿/* src/App.css */
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f2f2; /* Light background for contrast */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: #0099cc; /* Ocean Blue */
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Added for positioning of the mobile menu */
+}
+
+    /* Logo styling */
+    nav img.logo {
+        height: 100px;
+        margin-right: 20px;
+    }
+
+/* Hamburger menu styles */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Navigation menu styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem; 
+}
+
+/* Responsive navigation styles */
+@media (max-width: 768px) {
+    /* Display hamburger menu button on mobile screens */
+    .nav-toggle {
+        display: block;
+    }
+
+    /* Hide navigation menu by default on mobile */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0099cc;
+        position: absolute;
+        top: 100%; /* Position below the navbar */
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown effect */
+    }
+
+    /* Show navigation menu when open */
+    nav ul.nav-open {
+        display: flex;
+    }
+
+    /* Style list items for mobile */
+    nav ul li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    /* Style links for mobile */
+    nav ul li a {
+        padding: 1rem; /* Increase touch area */
+    }
+}
+
+@media (max-width: 480px) {
+    nav img.logo {
+        height: 80px; /* Adjust logo size for very small screens */
+    }
+
+    .nav-toggle {
+        font-size: 1.5rem; /* Adjust icon size for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 0.8rem; /* Reduce font size for very small screens */
+    }
+}
+
+/* Styles for sections */
+section {
+    width: 90%; /* Reduce width to simulate tablet view */
+    max-width: 800px; /* Max width for larger screens */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    position: relative; /* Relative positioning for inner centering */
+}
+
+section h2 {
+    color: #ff6f00; /* Sunset Orange */
+    margin-bottom: 1rem;
+    text-align: center; /* Center align the heading */
+}
+
+
+/* src/App.css */
+
+/* Style for the Price List section */
+#price-list {
+    display: flex;
+    flex-direction: column; /* Default direction for larger screens */
+    align-items: center; /* Center items horizontally */
+    padding: 2rem;
+}
+
+#price-list h2 {
+    color: #ff6f00; /* Sunset Orange */
+    margin-bottom: 1rem;
+}
+
+#price-list ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align list items in a row */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow wrapping if there are many items */
+}
+
+#price-list ul li {
+    margin: 0 15px; /* Space between items */
+    font-size: 1.1rem;
+    text-align: center; /* Center text in each item */
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    #price-list ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    #price-list ul li {
+        margin: 10px 0; /* Adjust spacing for vertical stacking */
+    }
+}
+
+
+#whats-included-container {
+    width: 100%; /* Full width of section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the list container horizontally */
+    text-align: left; /* Align text to the left within list items */
+}
+
+#whats-included-ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align list items to the left */
+    margin: 0;
+    width: 100%; /* Ensure the list container takes full width */
+    max-width: 600px; /* Optional: restrict width for better alignment */
+}
+
+#whats-included-ul li {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+#whats-included-ul li svg {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #0099cc;
+}
+
+.car-photo {
+    max-width: 500px;
+}
+
+welcome-p {
+    margin: 0 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 95%; /* Slightly larger width for tablets */
+        padding: 1rem;
+    }
+
+    .photo-gallery img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        font-size: 0.9rem;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .photo-gallery img {
+        max-width: 100%;
+    }
+}
