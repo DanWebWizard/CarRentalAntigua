@@ -40,14 +40,12 @@ nav ul li a {
     padding: 0.5rem 1rem;
 }
 
-/* Hover state for links */
 nav ul li a:hover {
-    color: #FAF9F6; /* Lighter color for better contrast */
+    color: #FAF9F6; 
 }
 
-/* Optional: Active link style for better navigation feedback */
 nav ul li a.active {
-    color: #FFCC00; /* Highlight color for active links */
+    color: #FFCC00; 
 }
 
 
@@ -58,20 +56,20 @@ button {
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a; /* Dark button background */
-    color: #ffffff; /* White text on button */
+    background-color: #1a1a1a; 
+    color: #ffffff; 
     cursor: pointer;
     transition: border-color 0.25s;
 }
 
-    button:hover {
-        border-color: #646cff; /* Button border color on hover */
-    }
+button:hover {
+    border-color: #646cff;
+}
 
-    button:focus,
-    button:focus-visible {
-        outline: 4px auto -webkit-focus-ring-color;
-    }
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
 
 @media (prefers-color-scheme: light) {
     :root {
