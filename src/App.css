@@ -234,6 +234,10 @@ welcome-p {
     margin: 0 20px;
 }
 
+#home {
+    margin-top: 80px; 
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -247,6 +251,9 @@ welcome-p {
 
     .photo-gallery img {
         max-width: 100%;
+    }
+    #home { 
+        margin-top: 160px; 
     }
 }
 
@@ -262,8 +269,9 @@ welcome-p {
     .photo-gallery img {
         max-width: 100%;
     }
+
+    #home { 
+        margin-top: 140px; 
+    }
 }
 
-#home {
-    margin-top: 100px; 
-}
