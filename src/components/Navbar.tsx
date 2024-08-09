@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
 
     return (
         <nav>
-            <img src="/images/logo.jpg" alt="Logo" className="logo" />
+            <img src="images/logo.jpg" alt="Logo" className="logo" />
             <button className="nav-toggle" onClick={toggleNav}>
                 {isNavOpen ? <FaTimes /> : <FaBars />}
             </button>

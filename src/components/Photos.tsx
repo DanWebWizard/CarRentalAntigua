@@ -3,7 +3,7 @@ import React from 'react';
 
 const Photos: React.FC = () => {
     const carImages: string[] = [
-        '/images/car.jpg',
+        'images/car.jpg',
     ];
 
     return (

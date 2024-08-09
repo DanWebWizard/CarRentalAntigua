@@ -16,7 +16,23 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-top: 80px; 
 }
+
+@media (max-width: 768px) {
+    .App {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align all child elements */
+        padding: 0 10px; /* Add some padding for better spacing */
+    }
+}
+
+.welcome-title {
+    text-align: center;
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -31,7 +47,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative; 
+    position: fixed; /* Ensure nav stays at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* High value to ensure it’s on top */
 }
 
 nav img.logo {
@@ -71,24 +90,24 @@ nav ul li a {
 
 
 @media (max-width: 768px) {
-
     .nav-toggle {
         display: block;
     }
 
     nav ul {
-        display: none;
+        display: none; /* Hide by default */
         flex-direction: column;
         width: 100%;
         background-color: #0099cc;
         position: absolute;
-        top: 100%; 
+        top: 100%; /* Position below the nav bar */
         left: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Ensure it’s on top */
     }
 
     nav ul.nav-open {
-        display: flex;
+        display: flex; /* Show when open */
     }
 
     nav ul li {
@@ -97,21 +116,21 @@ nav ul li a {
     }
 
     nav ul li a {
-        padding: 1rem; 
+        padding: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     nav img.logo {
-        height: 80px; 
+        height: 80px;
     }
 
     .nav-toggle {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     nav ul li a {
-        font-size: 0.8rem; 
+        font-size: 1rem;
     }
 }
 
@@ -243,4 +262,8 @@ welcome-p {
     .photo-gallery img {
         max-width: 100%;
     }
+}
+
+#home {
+    margin-top: 100px; 
 }
